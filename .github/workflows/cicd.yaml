@@ -23,6 +23,7 @@ jobs:
   hello:
     name: A simple hello job (macos)
     runs-on: ubuntu-latest
+    needs: [demo]
     steps:
       - name: A simple echo
         run: echo Hello
