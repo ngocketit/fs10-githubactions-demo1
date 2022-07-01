@@ -1,7 +1,7 @@
 name: Verysimple Demo of CI/CD
 
 on:
-  push:
+  pull_request:
     branches: [master, develop]
 
 jobs:
@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: A simple echo
         run: echo Demo
+
+      - name: Checkout code manually
+        run: git clone https://github.com/ngocketit/fs10-githubactions-demo1
 
       - name: Checkout the code
         uses: actions/checkout@v3
