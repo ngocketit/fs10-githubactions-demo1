@@ -6,8 +6,15 @@ on:
 
 jobs:
   demo:
-    name: A simple demo
+    name: A simple demo job (ubuntu)
     runs-on: ubuntu-latest
+    steps:
+      - name: A simple echo
+        run: echo Demo
+
+  hello:
+    name: A simple hello job (macos)
+    runs-on: macos-latest
     steps:
       - name: A simple echo
         run: echo Hello
