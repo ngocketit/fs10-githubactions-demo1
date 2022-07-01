@@ -1,0 +1,13 @@
+name: Verysimple Demo of CI/CD
+
+on:
+  push:
+    branches: [master, develop]
+
+jobs:
+  demo:
+    name: A simple demo
+    runs-on: ubuntu-latest
+    steps:
+      - name: A simple echo
+        run: echo Hello
